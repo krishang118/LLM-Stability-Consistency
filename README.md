@@ -4,7 +4,7 @@ A research pipeline to quantify internal stability, which is the ability of an L
 
 ## Overview
 
-Large Language Models (LLMs) are increasingly deployed as decision-support systems, yet their reliability is often measured only by accuracy against external benchmarks. This project investigates a fundamental reliability property, Consistency.
+Large Language Models (LLMs) are increasingly deployed as decision-support systems, yet their reliability is often measured only by accuracy against external benchmarks. This project investigates a fundamental reliability property: Consistency.
 
 Key findings from the analysis of DeepSeek-R1 (7B) and LLaMA-3 (8B):
 - Low Consistency: LLMs maintain only 45.3% semantic consistency under paraphrasing.
@@ -56,14 +56,11 @@ A clear hierarchy exists: Concrete > Abstract.
 
 ### Key Observations
 
-**1. Model-Agnostic Instability**
-Despite DeepSeek-R1 being optimized for reasoning tasks, it showed no statistically significant stability advantage over the general-purpose LLaMA-3. This suggests that internal inconsistency is likely an inherent property of current autoregressive architectures rather than a training artifact.
+- Model-Agnostic Instability: Despite DeepSeek-R1 being optimized for reasoning tasks, it showed no statistically significant stability advantage over the general-purpose LLaMA-3. This suggests that internal inconsistency is likely an inherent property of current autoregressive architectures rather than a training artifact.
 
-**2. The "Concrete-Abstract" Gap**
-A massive 72% stability gap was observed between concrete concepts and abstract ones. Models are highly consistent when discussing grounded topics like "Remote Work" or "Inflation" (definitions), but crumble when asked to reason about abstract meta-concepts like "Knowledge Limits" or "Uncertainty".
+- The "Concrete-Abstract" Gap: A massive 72% stability gap was observed between concrete concepts and abstract ones. Models are highly consistent when discussing grounded topics like "Remote Work" or "Inflation" (definitions), but crumble when asked to reason about abstract meta-concepts like "Knowledge Limits" or "Uncertainty".
 
-**3. The Inflation Paradox**
-The most striking finding is the decoupling of factual and normative consistency. The concept "Inflation" had the highest factual stability (CSS=0.657) yet the highest stance volatility (SVI=0.786). This means the model knows exactly what inflation is, but cannot decide how it feels about it, flipping its stance based on slight phrasing changes.
+- The Inflation Paradox: The most striking finding is the decoupling of factual and normative consistency. The concept "Inflation" had the highest factual stability (CSS=0.657) yet the highest stance volatility (SVI=0.786). This means the model knows exactly what inflation is, but cannot decide how it feels about it, flipping its stance based on slight phrasing changes.
 
 ### Conclusion
 
@@ -77,7 +74,7 @@ These results underscore a critical reliability gap in current LLMs. As models a
 ```bash
 pip install pandas numpy matplotlib seaborn scikit-learn sentence-transformers tqdm requests scipy
 ```
-4. Install Ollama & pull deepseek-r1:7b, llama3:latest.
+4. Install Ollama & pull deepseek-r1:7b and llama3:latest.
 5. Open and run the cells of the `LLM Stability.ipynb` Jupyter Notebook.
 
 ## Contributing
