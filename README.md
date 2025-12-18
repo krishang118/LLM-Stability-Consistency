@@ -4,7 +4,7 @@ A research pipeline to quantify internal stability, which is the ability of an L
 
 ## Overview
 
-Large Language Models (LLMs) are increasingly deployed as decision-support systems, yet their reliability is often measured only by accuracy against external benchmarks. This project investigates a fundamental reliability property: Consistency.
+Large Language Models (LLMs) are increasingly deployed as decision-support systems, yet their reliability is often measured only by accuracy against external benchmarks. This work investigates a fundamental reliability property: Consistency.
 
 Key findings from the analysis of DeepSeek-R1 (7B) and LLaMA-3 (8B):
 - Low Consistency: LLMs maintain only 45.3% semantic consistency under paraphrasing.
