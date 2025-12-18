@@ -80,9 +80,10 @@ pip install pandas numpy matplotlib seaborn scikit-learn sentence-transformers t
 4. Install Ollama & pull deepseek-r1:7b, llama3:latest.
 5. Open and run the cells of the `LLM Stability.ipynb` Jupyter Notebook.
 
+## Contributing
 
-A research pipeline for quantifying LLM internal consistency using novel Claim Stability, Stance Volatility, and Definition Drift metrics, revealing the 'Inflation Paradox' of decoupled factual and normative reliability.
+Contributions are welcome!
 
-or 
+## License
 
-A research pipeline for quantifying LLM internal consistency and the 'Inflation Paradox' using novel Claim Stability, Stance Volatility, and Definition Drift metrics.
+Distributed under the MIT License. 
